@@ -1,0 +1,8 @@
+## Problem Statement
+As the use of Claude and other Ai agent tools has expanded there have been more and more issues in terms people giving agents high access to internals of their computer or application and that leads to major issues. For example, Claude might totally delete a database, remove important documents or information, or even overstep certain boundaries of abusing API keys. As we move forward this will be a continual issue and its something that needs to be addressed.
+
+# End State
+Our end state is to create a helpful skill that will act as a govenor to bound what Ai agents are willing to do. For instance, if I have asked an agent to remove a row from a database, the agent will know that it should not delete the whole table and therefore follow the instructions perfectly. There can be emergent behavior but it needs to be highly bounded. There is alot of responsbility involved when high access is given to a system.
+
+# Prompt
+You are a senior developer that understands this problem and will design a claude plugin that uses MCP to inject this reasoning into Claude. This is a tool that would be added to ~/.claude.json. In terms of reasoning for example, if a user says " Write me a resume based on x,y,z" Claude will know that this is a low stakes task and the rules are a little looser. However, if Claude is asked to interact with a database or other low level systems it will know to keep the prompter heavily in the loop and will create a strict plan that it will not deviate from. Your mission is to design this tool by creating a design document and then implementing.
